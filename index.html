@@ -16,7 +16,7 @@
         .section-header {
             font-size: 2.25rem;
             font-weight: 700;
-            color: #d97706; /* A slightly adjusted amber for better contrast */
+            color: #2563eb; /* Updated to blue */
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
@@ -31,6 +31,17 @@
         .card:hover {
             transform: translateY(-5px);
         }
+        .skill-item-square {
+            display: inline-block;
+            padding: 0.5rem 0.75rem;
+            margin: 0.25rem;
+            border: 1px solid #3b82f6; /* Blue border for the square */
+            border-radius: 0.375rem; /* Rounded corners for the square */
+            background-color: #1f2937; /* Slightly darker background for the square */
+            color: #d1d5db; /* Light gray text for skills */
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
         @media (max-width: 768px) {
             .section-header {
                 font-size: 1.75rem;
@@ -40,26 +51,23 @@
 </head>
 <body class="bg-stone-800 text-stone-200">
 
-    <!-- Navbar -->
     <nav class="sticky top-0 z-50 bg-stone-900 shadow-sm py-4">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <a href="#home" class="text-2xl font-bold text-stone-100">Latisha Khorana</a>
             <div class="hidden md:flex space-x-8">
-                <a href="#about" class="text-stone-300 hover:text-amber-400 transition-colors">About</a>
-                <a href="#resume" class="text-stone-300 hover:text-amber-400 transition-colors">Skills</a>
-                <a href="#experience" class="text-stone-300 hover:text-amber-400 transition-colors">Experience</a>
-                <a href="#projects" class="text-stone-300 hover:text-amber-400 transition-colors">Projects</a>
-                <a href="#certifications" class="text-stone-300 hover:text-amber-400 transition-colors">Certifications</a>
-                <a href="#contact" class="text-stone-300 hover:text-amber-400 transition-colors">Contact</a>
+                <a href="#about" class="text-stone-300 hover:text-blue-400 transition-colors">About</a>
+                <a href="#resume" class="text-stone-300 hover:text-blue-400 transition-colors">Skills</a>
+                <a href="#experience" class="text-stone-300 hover:text-blue-400 transition-colors">Experience</a>
+                <a href="#projects" class="text-stone-300 hover:text-blue-400 transition-colors">Projects</a>
+                <a href="#certifications" class="text-stone-300 hover:text-blue-400 transition-colors">Certifications</a>
+                <a href="#contact" class="text-stone-300 hover:text-blue-400 transition-colors">Contact</a>
             </div>
-            <!-- Mobile Menu Button -->
             <button id="mobile-menu-button" class="md:hidden text-stone-300 hover:text-stone-100 focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 bg-stone-900">
                 <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-stone-300 hover:bg-stone-800">About</a>
@@ -73,7 +81,6 @@
     </nav>
 
     <main class="py-12">
-        <!-- Hero Section -->
         <section id="home" class="container mx-auto px-6 py-20 text-center">
             <div class="flex flex-col items-center mb-6">
                 <img src="1756250721415.jpg" alt="Latisha Khorana" class="rounded-full w-40 h-40 object-cover border-4 border-stone-600 shadow-lg mb-4">
@@ -84,10 +91,9 @@
             <p class="text-xl md:text-2xl text-stone-400 mb-8">
                 MSBA Candidate & E-commerce Tech Professional
             </p>
-            <a href="Latisha_Resume_v6.pdf" download class="bg-amber-600 text-white font-bold py-3 px-8 rounded-full shadow-md hover:bg-amber-700 transition-colors inline-block mt-4">Download Resume</a>
+            <a href="Latisha_Resume_v6.pdf" download class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-md hover:bg-blue-700 transition-colors inline-block mt-4">Download Resume</a>
         </section>
 
-        <!-- About Me Section -->
         <section id="about" class="py-16 bg-stone-900">
             <div class="container mx-auto px-6 max-w-4xl">
                 <h2 class="section-header mb-8 text-center">About Me</h2>
@@ -102,65 +108,62 @@
             </div>
         </section>
 
-        <!-- Technical Skills Section -->
         <section id="resume" class="py-16">
             <div class="container mx-auto px-6 max-w-4xl">
                 <h2 class="section-header mb-8 text-center">Technical Skills</h2>
                 <div class="card grid grid-cols-1 md:grid-cols-2 gap-8 text-stone-200">
                     <div>
-                        <h3 class="font-bold text-xl mb-2 text-amber-500">Programming & Databases</h3>
-                        <ul class="list-disc list-inside space-y-1 text-stone-300">
-                            <li>Python</li>
-                            <li>R</li>
-                            <li>SQL</li>
-                            <li>Database Management</li>
-                        </ul>
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Programming & Databases 💻</h3>
+                        <div class="flex flex-wrap">
+                            <span class="skill-item-square">Python</span>
+                            <span class="skill-item-square">R</span>
+                            <span class="skill-item-square">SQL</span>
+                            <span class="skill-item-square">Database Management</span>
+                        </div>
                     </div>
                     <div>
-                        <h3 class="font-bold text-xl mb-2 text-amber-500">Statistical Methods</h3>
-                        <ul class="list-disc list-inside space-y-1 text-stone-300">
-                            <li>Regression</li>
-                            <li>Time Series Forecasting</li>
-                            <li>Monte Carlo Simulation</li>
-                            <li>Hypothesis Testing</li>
-                            <li>Econometrics</li>
-                            <li>Predictive Modeling</li>
-                            <li>Risk Analysis, Optimization</li>
-                        </ul>
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Statistical Methods 📊</h3>
+                        <div class="flex flex-wrap">
+                            <span class="skill-item-square">Regression</span>
+                            <span class="skill-item-square">Time Series Forecasting</span>
+                            <span class="skill-item-square">Monte Carlo Simulation</span>
+                            <span class="skill-item-square">Hypothesis Testing</span>
+                            <span class="skill-item-square">Econometrics</span>
+                            <span class="skill-item-square">Predictive Modeling</span>
+                            <span class="skill-item-square">Risk Analysis, Optimization</span>
+                        </div>
                     </div>
                     <div>
-                        <h3 class="font-bold text-xl mb-2 text-amber-500">Machine Learning & Analytics</h3>
-                        <ul class="list-disc list-inside space-y-1 text-stone-300">
-                            <li>Classification</li>
-                            <li>Clustering</li>
-                            <li>Feature Engineering</li>
-                            <li>A/B Testing</li>
-                            <li>Scenario Analysis</li>
-                        </ul>
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Machine Learning & Analytics 🧠</h3>
+                        <div class="flex flex-wrap">
+                            <span class="skill-item-square">Classification</span>
+                            <span class="skill-item-square">Clustering</span>
+                            <span class="skill-item-square">Feature Engineering</span>
+                            <span class="skill-item-square">A/B Testing</span>
+                            <span class="skill-item-square">Scenario Analysis</span>
+                        </div>
                     </div>
                     <div>
-                        <h3 class="font-bold text-xl mb-2 text-amber-500">Visualization & Finance Tools</h3>
-                        <ul class="list-disc list-inside space-y-1 text-stone-300">
-                            <li>Tableau</li>
-                            <li>Advanced Excel</li>
-                            <li>Dashboard Development</li>
-                            <li>Data Wrangling</li>
-                            <li>Financial Modeling</li>
-                            <li>P&L Management</li>
-                            <li>Sensitivity Analysis</li>
-                            <li>Market Trend Analysis</li>
-                        </ul>
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Visualization & Finance Tools 📈</h3>
+                        <div class="flex flex-wrap">
+                            <span class="skill-item-square">Tableau</span>
+                            <span class="skill-item-square">Advanced Excel</span>
+                            <span class="skill-item-square">Dashboard Development</span>
+                            <span class="skill-item-square">Data Wrangling</span>
+                            <span class="skill-item-square">Financial Modeling</span>
+                            <span class="skill-item-square">P&L Management</span>
+                            <span class="skill-item-square">Sensitivity Analysis</span>
+                            <span class="skill-item-square">Market Trend Analysis</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Experience Section -->
         <section id="experience" class="py-16 bg-stone-900">
             <div class="container mx-auto px-6 max-w-4xl">
                 <h2 class="section-header mb-8 text-center">Experience</h2>
                 <div class="space-y-8">
-                    <!-- W&M GA -->
                     <div class="card">
                         <h3 class="text-xl font-bold text-stone-100">Graduate Assistant – William & Mary</h3>
                         <p class="text-stone-400 text-sm">Williamsburg, VA | Aug 2025 – Present</p>
@@ -170,18 +173,17 @@
                         </ul>
                     </div>
                     
-                    <!-- TikTok -->
                     <div class="card">
                         <h3 class="text-xl font-bold text-stone-100">TikTok Shop - Operations: Business Analytics & New Initiatives</h3>
                         <p class="text-stone-400 text-sm">Bangkok, Thailand | Jan 2024 – July 2025</p>
-                        <h4 class="text-lg font-semibold text-amber-500 mt-4">Manager and Project Lead</h4>
+                        <h4 class="text-lg font-semibold text-blue-500 mt-4">Manager and Project Lead</h4>
                         <p class="text-stone-400 text-sm">Jan 2025 – July 2025</p>
                         <ul class="list-disc list-inside mt-2 text-stone-300 space-y-2">
                             <li>Spearheaded a team of 5 to continue to drive impactful projects in Logistics, Governance, ADs, Brands, Aftersales and account management productivity</li>
                             <li>Evaluated, strategized and implemented revenue driver plans to secure Tiktok shops revenue with a YoY growth of 113%</li>
                             <li>Implemented Account Management Balance scorecard to enhance productivity, product adoption by 100% and revamp cost per headcount by 53%</li>
                         </ul>
-                        <h4 class="text-lg font-semibold text-amber-500 mt-4">Assistant Manager and Project Lead</h4>
+                        <h4 class="text-lg font-semibold text-blue-500 mt-4">Assistant Manager and Project Lead</h4>
                         <p class="text-stone-400 text-sm">Jan 2024 – Dec 2024</p>
                         <ul class="list-disc list-inside mt-2 text-stone-300 space-y-2">
                             <li>Constructed key market strategies using price sensitivity and trendy products, achieving high price competitiveness and retaining 36% of high-priced orders within two months, making TH best performing market in SEA</li>
@@ -191,7 +193,6 @@
                         </ul>
                     </div>
 
-                    <!-- Shopee - Business Intelligence -->
                     <div class="card">
                         <h3 class="text-xl font-bold text-stone-100">Shopee - Business Intelligence : BI Strategy & Planning</h3>
                         <p class="text-stone-400 text-sm">Bangkok, Thailand | July 2023 - December 2023</p>
@@ -203,28 +204,27 @@
                         </ul>
                     </div>
 
-                    <!-- Shopee - Management Trainee -->
                     <div class="card">
                         <h3 class="text-xl font-bold text-stone-100">Shopee Global Leaders Program (Management Trainee)</h3>
                         <p class="text-stone-400 text-sm">Thailand & Vietnam | July 2021 - July 2023</p>
-                        <h4 class="text-lg font-semibold text-amber-500 mt-4">Rotation 4: Operations - Order Management Team, VN</h4>
+                        <h4 class="text-lg font-semibold text-blue-500 mt-4">Rotation 4: Operations - Order Management Team, VN</h4>
                         <ul class="list-disc list-inside mt-2 text-stone-300 space-y-2">
                             <li>Analyzed and optimized delivery routes, proposing optimal backend settings to meet buyer expectations improving CSAT by 200% in 1 month of execution</li>
                             <li>Devised a forecast model for delivery and pickup based on internal capacity to control backlog and ensure optimal performance reducing backlog by 10%</li>
                         </ul>
-                        <h4 class="text-lg font-semibold text-amber-500 mt-4">Rotation 3: Business Development Seller Performance Team, TH</h4>
+                        <h4 class="text-lg font-semibold text-blue-500 mt-4">Rotation 3: Business Development Seller Performance Team, TH</h4>
                         <ul class="list-disc list-inside mt-2 text-stone-300 space-y-2">
                             <li>Revised assortment health with a quality and quantity increase of 2.0x and 1.5x, respectively</li>
                             <li>Launched targeted monetization programs for untapped SME seller segments, increasing platform revenue 250% by increasing activation, engagement, and conversion within group</li>
                             <li>Automated and streamlined databases, reducing manual workload by 95%</li>
                         </ul>
-                        <h4 class="text-lg font-semibold text-amber-500 mt-4">Rotation 2: Business Intelligence Strategic Insight Team, TH</h4>
+                        <h4 class="text-lg font-semibold text-blue-500 mt-4">Rotation 2: Business Intelligence Strategic Insight Team, TH</h4>
                         <ul class="list-disc list-inside mt-2 text-stone-300 space-y-2">
                             <li>Created a framework for examining macroeconomic impacts on Shopee's performance, saving $85 million.</li>
                             <li>Queried, processed, and analyzed data for regional analysis of three countries simultaneously.</li>
                             <li>Created a dynamic model to calculate optimal interest rate for newly launched micro loans on platform to secure 15% adoption within 1M of launch</li>
                         </ul>
-                        <h4 class="text-lg font-semibold text-amber-500 mt-4">Rotation 1: Marketing, Big Campaigns Team, TH</h4>
+                        <h4 class="text-lg font-semibold text-blue-500 mt-4">Rotation 1: Marketing, Big Campaigns Team, TH</h4>
                         <ul class="list-disc list-inside mt-2 text-stone-300 space-y-2">
                             <li>Planned, managed, & executed two mega campaigns (11.11 and 12.12), accomplishing highest daily traffic and a 35% increase in GMV YOY.</li>
                             <li>Planned, executed, and analyzed first-ever e-auction mechanic in Thailand during 11.11 x Pruksa, achieving a 588% engagement uplift.</li>
@@ -234,121 +234,109 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
         <section id="projects" class="py-16">
             <div class="container mx-auto px-6 max-w-4xl">
                 <h2 class="section-header mb-8 text-center">Projects & Leadership</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Existing Projects -->
                     <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-amber-500">Job Market Analysis Dashboard <span class="text-stone-400 font-normal text-sm">(Group Project)</span></h3>
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Job Market Analysis Dashboard <span class="text-stone-400 font-normal text-sm">(Group Project)</span></h3>
                         <p class="mt-4 text-stone-300">A live dashboard analyzing the job market, utilizing callbacks to provide an interactive and dynamic user experience. This project was developed as a group effort. The dashboard is hosted on Render.com.</p>
-                        <a href="https://final-dashboard-8u8b.onrender.com" target="_blank" class="inline-block mt-4 text-sm text-amber-500 hover:text-amber-300 font-medium">View Live Dashboard &rarr;</a>
+                        <a href="https://final-dashboard-8u8b.onrender.com" target="_blank" class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-300 font-medium">View Live Dashboard &rarr;</a>
                     </div>
                     <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-amber-500">Yahoo Finance Tariff Analysis <span class="text-stone-400 font-normal text-sm">(Group Project)</span></h3>
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Yahoo Finance Tariff Analysis <span class="text-stone-400 font-normal text-sm">(Group Project)</span></h3>
                         <p class="mt-4 text-stone-300">A data-driven project to analyze the impacts of tariffs on various industries, focusing on companies like General Motors, Apple, and Duke Energy. The project involved data wrangling and visualization to showcase the diverse effects of the tariffs. (Team members: Latisha Khorana, RaKaya Johnson, Mann Pawar, Brandon Ward).</p>
-                        <!-- Added link to the code -->
-                        <a href="y_finance_team11_final_wdash.zip/yfinance_v2.py" class="inline-block mt-4 text-sm text-amber-500 hover:text-amber-300 font-medium">View Project Code &rarr;</a>
+                        <a href="y_finance_team11_final_wdash.zip/yfinance_v2.py" class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-300 font-medium">View Project Code &rarr;</a>
                     </div>
                     <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-amber-500">MSBA Student Council</h3>
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">MSBA Student Council</h3>
                         <p class="text-stone-400 text-sm">Aug 2025 - Present</p>
                         <p class="mt-4 text-stone-300">Active member of the student council, contributing to student life and academic initiatives within the MSBA program.</p>
                     </div>
                     <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-amber-500">Blind Theatre Charity Project</h3>
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Blind Theatre Charity Project</h3>
                         <p class="text-stone-400 text-sm">May 2019 - Oct 2019</p>
                         <p class="mt-4 text-stone-300">A project focused on using theatre as a medium for charity, with a focus on engaging with the blind community.</p>
                     </div>
                     <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-amber-500">Social Enterprise Conference (SECON)</h3>
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Social Enterprise Conference (SECON)</h3>
                         <p class="text-stone-400 text-sm">Hosted by UNESCO Bangkok</p>
                         <p class="mt-4 text-stone-300">An event focused on bringing together social entrepreneurs to discuss impactful and sustainable business models.</p>
                     </div>
                     <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-amber-500">Wednesday Morning English School</h3>
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Wednesday Morning English School</h3>
                         <p class="mt-4 text-stone-300">A personal project focused on volunteering at a school to teach English to students on a weekly basis.</p>
                     </div>
                     <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-amber-500">Graduate Council, William & Mary</h3>
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Graduate Council, William & Mary</h3>
                         <p class="text-stone-400 text-sm">Aug 2025 - Present</p>
                         <p class="mt-4 text-stone-300">Serve on the International Advisory Committee, contributing quantitative insights into global strategy initiatives.</p>
                     </div>
                     
-                    <!-- New Projects -->
                     <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-amber-500">Newman Exclusive Marketing Director</h3>
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Newman Exclusive Marketing Director</h3>
                         <p class="mt-4 text-stone-300">Led end-to-end marketing campaigns, ascertained influencer partnership opportunities, managed marketing budgets, and developed company branding—including website, logo, and visual identity.</p>
-                        <!-- Added link to the website -->
-                        <a href="https://www.newmanexclusive.com" target="_blank" class="inline-block mt-4 text-sm text-amber-500 hover:text-amber-300 font-medium">Visit Website &rarr;</a>
+                        <a href="https://www.newmanexclusive.com" target="_blank" class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-300 font-medium">Visit Website &rarr;</a>
                     </div>
                     <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-amber-500">Indie Band Marketing Campaign</h3>
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Indie Band Marketing Campaign</h3>
                         <p class="mt-4 text-stone-300">Improved band's overall social media traction with +17% avg. monthly streams, +25% avg. monthly listeners and followers count by +15% in 2 weeks.</p>
                     </div>
                     <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-amber-500">Self-Published Author</h3>
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Self-Published Author</h3>
                         <p class="mt-4 text-stone-300">Published a book on Amazon Direct: "The Anguished Us."; a collection of poems.</p>
-                        <!-- Added link to the book -->
-                        <a href="https://www.amazon.com/Anguished-Us-Bad-1/dp/1545436878" target="_blank" class="inline-block mt-4 text-sm text-amber-500 hover:text-amber-300 font-medium">View on Amazon &rarr;</a>
+                        <a href="https://www.amazon.com/Anguished-Us-Bad-1/dp/1545436878" target="_blank" class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-300 font-medium">View on Amazon &rarr;</a>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Professional Certifications Section -->
         <section id="certifications" class="py-16 bg-stone-900">
             <div class="container mx-auto px-6 max-w-4xl">
                 <h2 class="section-header mb-8 text-center">Professional Certifications</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-amber-500">Data Analyst in Python</h3>
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Data Analyst in Python</h3>
                         <p class="text-stone-400 text-sm">DataCamp | Completed July 19, 2025</p>
-                        <!-- Updated to include a download link for the certificate -->
-                        <a href="certificate.pdf" download class="inline-block mt-4 text-sm text-amber-500 hover:text-amber-300 font-medium">Download Certificate &rarr;</a>
+                        <a href="certificate.pdf" download class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-300 font-medium">Download Certificate &rarr;</a>
                     </div>
                     <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-amber-500">Data Analyst in R</h3>
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Data Analyst in R</h3>
                         <p class="text-stone-400 text-sm">DataCamp | Completed July 08, 2025</p>
-                        <!-- Updated to include a download link for the certificate -->
-                        <a href="new.pdf" download class="inline-block mt-4 text-sm text-amber-500 hover:text-amber-300 font-medium">Download Certificate &rarr;</a>
+                        <a href="new.pdf" download class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-300 font-medium">Download Certificate &rarr;</a>
                     </div>
                     <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-amber-500">Data Analysis with R Specialization</h3>
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Data Analysis with R Specialization</h3>
                         <p class="text-stone-400 text-sm">Coursera & Duke University | Completed July 26, 2025</p>
                         <p class="mt-2 text-stone-300">
                             Includes: Introduction to Probability and Data with R, Inferential Statistics, Linear Regression and Modeling.
                         </p>
-                        <!-- Updated to include a download link for the certificate -->
-                        <a href="Coursera PX5WJH7GPN3L.pdf" download class="inline-block mt-4 text-sm text-amber-500 hover:text-amber-300 font-medium">Download Certificate &rarr;</a>
+                        <a href="Coursera PX5WJH7GPN3L.pdf" download class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-300 font-medium">Download Certificate &rarr;</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="py-16">
             <div class="container mx-auto px-6 max-w-4xl">
                 <h2 class="section-header mb-8 text-center">Contact Me</h2>
                 <div class="card text-center space-y-4 text-stone-200">
                     <div class="text-lg">
-                        <p class="font-bold text-amber-500">Email</p>
-                        <a href="mailto:lkhorana@wm.edu" class="text-stone-300 hover:text-amber-500 transition-colors">lkhorana@wm.edu</a>
+                        <p class="font-bold text-blue-500">Email</p>
+                        <a href="mailto:lkhorana@wm.edu" class="text-stone-300 hover:text-blue-500 transition-colors">lkhorana@wm.edu</a>
                     </div>
                     <div class="text-lg">
-                        <p class="font-bold text-amber-500">Phone</p>
-                        <a href="tel:+17578820222" class="text-stone-300 hover:text-amber-500 transition-colors">(+1) 757-882-0222</a>
+                        <p class="font-bold text-blue-500">Phone</p>
+                        <a href="tel:+17578820222" class="text-stone-300 hover:text-blue-500 transition-colors">(+1) 757-882-0222</a>
                     </div>
                     <div class="flex justify-center space-x-4 pt-4">
-                        <a href="www.linkedin.com/in/latishakhorana" target="_blank" class="bg-amber-600 text-white font-bold py-3 px-8 rounded-full shadow-md hover:bg-amber-700 transition-colors">LinkedIn</a>
+                        <a href="www.linkedin.com/in/latishakhorana" target="_blank" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-md hover:bg-blue-700 transition-colors">LinkedIn</a>
                         <a href="https://github.com/lkhorana/Latishas-Portfolio" target="_blank" class="bg-stone-700 text-stone-100 font-bold py-3 px-8 rounded-full shadow-md hover:bg-stone-600 transition-colors">GitHub</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Footer -->
         <footer class="py-12 bg-stone-900 text-stone-100 text-center">
             <p>&copy; 2025 Latisha Khorana. All rights reserved.</p>
         </footer>
