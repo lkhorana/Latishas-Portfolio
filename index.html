@@ -31,17 +31,7 @@
         .card:hover {
             transform: translateY(-5px);
         }
-        .skill-item-square {
-            display: inline-block;
-            padding: 0.5rem 0.75rem;
-            margin: 0.25rem;
-            border: 1px solid #3b82f6; /* Blue border for the square */
-            border-radius: 0.375rem; /* Rounded corners for the square */
-            background-color: #1f2937; /* Slightly darker background for the square */
-            color: #d1d5db; /* Light gray text for skills */
-            font-size: 0.9rem;
-            white-space: nowrap;
-        }
+        /* No longer need .skill-item-square as we'll use Tailwind classes directly for the new skill pill style */
         @media (max-width: 768px) {
             .section-header {
                 font-size: 1.75rem;
@@ -111,49 +101,111 @@
         <section id="resume" class="py-16">
             <div class="container mx-auto px-6 max-w-4xl">
                 <h2 class="section-header mb-8 text-center">Technical Skills</h2>
-                <div class="card grid grid-cols-1 md:grid-cols-2 gap-8 text-stone-200">
-                    <div>
-                        <h3 class="font-bold text-xl mb-2 text-blue-500">Programming & Databases 💻</h3>
-                        <div class="flex flex-wrap">
-                            <span class="skill-item-square">Python</span>
-                            <span class="skill-item-square">R</span>
-                            <span class="skill-item-square">SQL</span>
-                            <span class="skill-item-square">Database Management</span>
+                <div class="card p-6">
+                    <h3 class="font-bold text-xl mb-4 text-stone-100">Featured</h3>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">🐍</span> Python
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">📊</span> R
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">🗄️</span> SQL
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">📈</span> Tableau
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">📝</span> Advanced Excel
                         </div>
                     </div>
-                    <div>
-                        <h3 class="font-bold text-xl mb-2 text-blue-500">Statistical Methods 📊</h3>
-                        <div class="flex flex-wrap">
-                            <span class="skill-item-square">Regression</span>
-                            <span class="skill-item-square">Time Series Forecasting</span>
-                            <span class="skill-item-square">Monte Carlo Simulation</span>
-                            <span class="skill-item-square">Hypothesis Testing</span>
-                            <span class="skill-item-square">Econometrics</span>
-                            <span class="skill-item-square">Predictive Modeling</span>
-                            <span class="skill-item-square">Risk Analysis, Optimization</span>
+
+                    <h3 class="font-bold text-xl mb-4 text-stone-100">Programming & Databases</h3>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">🐍</span> Python
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">📊</span> R
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">🗄️</span> SQL
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">💾</span> Database Management
                         </div>
                     </div>
-                    <div>
-                        <h3 class="font-bold text-xl mb-2 text-blue-500">Machine Learning & Analytics 🧠</h3>
-                        <div class="flex flex-wrap">
-                            <span class="skill-item-square">Classification</span>
-                            <span class="skill-item-square">Clustering</span>
-                            <span class="skill-item-square">Feature Engineering</span>
-                            <span class="skill-item-square">A/B Testing</span>
-                            <span class="skill-item-square">Scenario Analysis</span>
+
+                    <h3 class="font-bold text-xl mb-4 text-stone-100">Statistical Methods</h3>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">📈</span> Regression
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">🕰️</span> Time Series Forecasting
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">🎲</span> Monte Carlo Simulation
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">🧪</span> Hypothesis Testing
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">💰</span> Econometrics
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">🔮</span> Predictive Modeling
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">🚨</span> Risk Analysis, Optimization
                         </div>
                     </div>
-                    <div>
-                        <h3 class="font-bold text-xl mb-2 text-blue-500">Visualization & Finance Tools 📈</h3>
-                        <div class="flex flex-wrap">
-                            <span class="skill-item-square">Tableau</span>
-                            <span class="skill-item-square">Advanced Excel</span>
-                            <span class="skill-item-square">Dashboard Development</span>
-                            <span class="skill-item-square">Data Wrangling</span>
-                            <span class="skill-item-square">Financial Modeling</span>
-                            <span class="skill-item-square">P&L Management</span>
-                            <span class="skill-item-square">Sensitivity Analysis</span>
-                            <span class="skill-item-square">Market Trend Analysis</span>
+
+                    <h3 class="font-bold text-xl mb-4 text-stone-100">Machine Learning & Analytics</h3>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">🏷️</span> Classification
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">🔗</span> Clustering
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">🛠️</span> Feature Engineering
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">🔬</span> A/B Testing
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">📝</span> Scenario Analysis
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-xl mb-4 text-stone-100">Visualization & Finance Tools</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">📈</span> Tableau
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">📊</span> Advanced Excel
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">💻</span> Dashboard Development
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">🧹</span> Data Wrangling
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">💲</span> Financial Modeling
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">💼</span> P&L Management
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">🔍</span> Sensitivity Analysis
+                        </div>
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                            <span class="mr-2 text-blue-400">🌐</span> Market Trend Analysis
                         </div>
                     </div>
                 </div>
