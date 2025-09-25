@@ -1,429 +1,426 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latisha's Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdL5i7Qj5G0i5jV2/6w0QxPz+81U+y6O9O3F3c8f8q1yQ3q5l0oD5y2QvF7q3aGg3iQfQ2wY5WqB6G7VqE1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-        }
-        .section-header {
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: #2563eb; /* Updated to blue */
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-        .card {
-            background-color: #292524;
-            border-radius: 1rem;
-            padding: 2.5rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
-            border: 1px solid #57534e;
-            transition: transform 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        /* No longer need .skill-item-square as we'll use Tailwind classes directly for the new skill pill style */
-        @media (max-width: 768px) {
-            .section-header {
-                font-size: 1.75rem;
-            }
-        }
-    </style>
-</head>
-<body class="bg-stone-800 text-stone-200">
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Latisha's Portfolio</title> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJ8uBw/WJmZ4jZqjJ+H/Ew4vjD0Z5e2t0j9a9o6W9cR8K7fWJkQ7+P3Q9R7g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style> 
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            scroll-behavior: smooth; 
+        } 
+        .section-header { 
+            font-size: 2.25rem; 
+            font-weight: 700; 
+            color: #2563eb; /* Updated to blue */ 
+            text-transform: uppercase; 
+            letter-spacing: 0.1em; 
+        } 
+        .card { 
+            background-color: #292524; 
+            border-radius: 1rem; 
+            padding: 2.5rem; 
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2); 
+            border: 1px solid #57534e; 
+            transition: transform 0.3s ease; 
+        } 
+        .card:hover { 
+            transform: translateY(-5px); 
+        } 
+        /* No longer need .skill-item-square as we'll use Tailwind classes directly for the new skill pill style */ 
+        @media (max-width: 768px) { 
+            .section-header { 
+                font-size: 1.75rem; 
+            } 
+        } 
+    </style> 
+</head> 
+<body class="bg-stone-800 text-stone-200"> 
 
-    <nav class="sticky top-0 z-50 bg-stone-900 shadow-sm py-4">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-bold text-stone-100">Latisha Khorana</a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#about" class="text-stone-300 hover:text-blue-400 transition-colors">About</a>
-                <a href="#resume" class="text-stone-300 hover:text-blue-400 transition-colors">Skills</a>
-                <a href="#experience" class="text-stone-300 hover:text-blue-400 transition-colors">Experience</a>
-                <a href="#projects" class="text-stone-300 hover:text-blue-400 transition-colors">Projects</a>
-                <a href="#certifications" class="text-stone-300 hover:text-blue-400 transition-colors">Certifications</a>
-                <a href="#contact" class="text-stone-300 hover:text-blue-400 transition-colors">Contact</a>
-            </div>
-            <button id="mobile-menu-button" class="md:hidden text-stone-300 hover:text-stone-100 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 bg-stone-900">
-                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-stone-300 hover:bg-stone-800">About</a>
-                <a href="#resume" class="block px-3 py-2 rounded-md text-base font-medium text-stone-300 hover:bg-stone-800">Skills</a>
-                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-stone-300 hover:bg-stone-800">Experience</a>
-                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-stone-300 hover:bg-stone-800">Projects</a>
-                <a href="#certifications" class="block px-3 py-2 rounded-md text-base font-medium text-stone-300 hover:bg-stone-800">Certifications</a>
-                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-stone-300 hover:bg-stone-800">Contact</a>
-            </div>
-        </div>
-    </nav>
+    <nav class="sticky top-0 z-50 bg-stone-900 shadow-sm py-4"> 
+        <div class="container mx-auto px-6 flex justify-between items-center"> 
+            <a href="#home" class="text-2xl font-bold text-stone-100">Latisha Khorana</a> 
+            <div class="hidden md:flex space-x-8"> 
+                <a href="#about" class="text-stone-300 hover:text-blue-400 transition-colors">About</a> 
+                <a href="#resume" class="text-stone-300 hover:text-blue-400 transition-colors">Skills</a> 
+                <a href="#experience" class="text-stone-300 hover:text-blue-400 transition-colors">Experience</a> 
+                <a href="#projects" class="text-stone-300 hover:text-blue-400 transition-colors">Projects</a> 
+                <a href="#certifications" class="text-stone-300 hover:text-blue-400 transition-colors">Certifications</a> 
+                <a href="#contact" class="text-stone-300 hover:text-blue-400 transition-colors">Contact</a> 
+            </div> 
+            <button id="mobile-menu-button" class="md:hidden text-stone-300 hover:text-stone-100 focus:outline-none"> 
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path> 
+                </svg> 
+            </button> 
+        </div> 
+        <div id="mobile-menu" class="hidden md:hidden"> 
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-stone-900"> 
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-stone-300 hover:bg-stone-800">About</a> 
+                <a href="#resume" class="block px-3 py-2 rounded-md text-base font-medium text-stone-300 hover:bg-stone-800">Skills</a> 
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-stone-300 hover:bg-stone-800">Experience</a> 
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-stone-300 hover:bg-stone-800">Projects</a> 
+                <a href="#certifications" class="block px-3 py-2 rounded-md text-base font-medium text-stone-300 hover:bg-stone-800">Certifications</a> 
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-stone-300 hover:bg-stone-800">Contact</a> 
+            </div> 
+        </div> 
+    </nav> 
 
-    <main class="py-12">
-        <section id="home" class="container mx-auto px-6 py-20 text-center">
-            <div class="flex flex-col items-center mb-6">
-                <img src="1756250721415.jpg" alt="Latisha Khorana" class="rounded-full w-40 h-40 object-cover border-4 border-stone-600 shadow-lg mb-4">
-            </div>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-stone-100 leading-tight mb-4">
-                Latisha Khorana
-            </h1>
-            <p class="text-xl md:text-2xl text-stone-400 mb-8">
-                MSBA Candidate & E-commerce Tech Professional
-            </p>
-                        <a href="Latisha_Resume_V7.pdf" download class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-md hover:bg-blue-700 transition-colors inline-block mt-4">Download Resume</a>
-        </section>
+    <main class="py-12"> 
+        <section id="home" class="container mx-auto px-6 py-20 text-center"> 
+            <div class="flex flex-col items-center mb-6"> 
+                <img src="1756250721415.jpg" alt="Latisha Khorana" class="rounded-full w-40 h-40 object-cover border-4 border-stone-600 shadow-lg mb-4"> 
+            </div> 
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-stone-100 leading-tight mb-4"> 
+                Latisha Khorana 
+            </h1> 
+            <p class="text-xl md:text-2xl text-stone-400 mb-8"> 
+                MSBA Candidate & E-commerce Tech Professional 
+            </p> 
+            <a href="Latisha_Resume_V7.pdf" download class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-md hover:bg-blue-700 transition-colors inline-block mt-4">Download Resume</a> 
+        </section> 
 
-        <section id="about" class="py-16 bg-stone-900">
-            <div class="container mx-auto px-6 max-w-4xl">
-                <h2 class="section-header mb-8 text-center">About Me</h2>
-                <div class="card text-stone-200">
-                    <p class="text-lg leading-relaxed">
-                        I am a hard-working and data-driven professional with over 4 years of experience in E-commerce technology at Shopee and TikTok. I am a graduate of Thammasat University, where I earned a Bachelor of Business Administration and was honored as a Case Team member. I am currently an MSBA Candidate at William & Mary, where I was recognized with a Merit scholarship.
-                    </p>
-                    <p class="mt-4 text-lg leading-relaxed">
-                        At William & Mary, I have actively contributed to the university community as a leader in both the MSBA Student Council and the Graduate Council, in addition to my role as a Graduate Assistant.
-                    </p>
-                </div>
-            </div>
-        </section>
+        <section id="about" class="py-16 bg-stone-900"> 
+            <div class="container mx-auto px-6 max-w-4xl"> 
+                <h2 class="section-header mb-8 text-center">About Me</h2> 
+                <div class="card text-stone-200"> 
+                    <p class="text-lg leading-relaxed"> 
+                        I am a hard-working and data-driven professional with over 4 years of experience in E-commerce technology at Shopee and TikTok. I am a graduate of Thammasat University, where I earned a Bachelor of Business Administration and was honored as a Case Team member. I am currently an MSBA Candidate at William & Mary, where I was recognized with a Merit scholarship. 
+                    </p> 
+                    <p class="mt-4 text-lg leading-relaxed"> 
+                        At William & Mary, I have actively contributed to the university community as a leader in both the MSBA Student Council and the Graduate Council, in addition to my role as a Graduate Assistant. 
+                    </p> 
+                </div> 
+            </div> 
+        </section> 
 
-        <section id="resume" class="py-16">
-            <div class="container mx-auto px-6 max-w-4xl">
-                <h2 class="section-header mb-8 text-center">Technical Skills</h2>
-                <div class="card p-6">
-                    <h3 class="font-bold text-xl mb-4 text-stone-100">Featured</h3>
-                    <div class="flex flex-wrap gap-3 mb-8">
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">🐍</span> Python
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">📊</span> R
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">🗄️</span> SQL
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">📈</span> Tableau
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">📝</span> Advanced Excel
-                        </div>
-                    </div>
+        <section id="resume" class="py-16"> 
+            <div class="container mx-auto px-6 max-w-4xl"> 
+                <h2 class="section-header mb-8 text-center">Technical Skills</h2> 
+                <div class="card p-6"> 
+                    <h3 class="font-bold text-xl mb-4 text-stone-100">Featured</h3> 
+                    <div class="flex flex-wrap gap-3 mb-8"> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">🐍</span> Python 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">📊</span> R 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">🗄️</span> SQL 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">📈</span> Tableau 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">📝</span> Advanced Excel 
+                        </div> 
+                    </div> 
 
-                    <h3 class="font-bold text-xl mb-4 text-stone-100">Programming & Databases</h3>
-                    <div class="flex flex-wrap gap-3 mb-8">
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">🐍</span> Python
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">📊</span> R
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">🗄️</span> SQL
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">💾</span> Database Management
-                        </div>
-                    </div>
+                    <h3 class="font-bold text-xl mb-4 text-stone-100">Programming & Databases</h3> 
+                    <div class="flex flex-wrap gap-3 mb-8"> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">🐍</span> Python 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">📊</span> R 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">🗄️</span> SQL 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">💾</span> Database Management 
+                        </div> 
+                    </div> 
 
-                    <h3 class="font-bold text-xl mb-4 text-stone-100">Statistical Methods</h3>
-                    <div class="flex flex-wrap gap-3 mb-8">
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">📈</span> Regression
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">🕰️</span> Time Series Forecasting
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">🎲</span> Monte Carlo Simulation
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">🧪</span> Hypothesis Testing
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">💰</span> Econometrics
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">🔮</span> Predictive Modeling
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">🚨</span> Risk Analysis, Optimization
-                        </div>
-                    </div>
+                    <h3 class="font-bold text-xl mb-4 text-stone-100">Statistical Methods</h3> 
+                    <div class="flex flex-wrap gap-3 mb-8"> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">📈</span> Regression 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">🕰️</span> Time Series Forecasting 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">🎲</span> Monte Carlo Simulation 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">🧪</span> Hypothesis Testing 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">💰</span> Econometrics 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">🔮</span> Predictive Modeling 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">🚨</span> Risk Analysis, Optimization 
+                        </div> 
+                    </div> 
 
-                    <h3 class="font-bold text-xl mb-4 text-stone-100">Machine Learning & Analytics</h3>
-                    <div class="flex flex-wrap gap-3 mb-8">
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">🏷️</span> Classification
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">🔗</span> Clustering
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">🛠️</span> Feature Engineering
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">🔬</span> A/B Testing
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">📝</span> Scenario Analysis
-                        </div>
-                    </div>
+                    <h3 class="font-bold text-xl mb-4 text-stone-100">Machine Learning & Analytics</h3> 
+                    <div class="flex flex-wrap gap-3 mb-8"> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">🏷️</span> Classification 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">🔗</span> Clustering 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">🛠️</span> Feature Engineering 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">🔬</span> A/B Testing 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">📝</span> Scenario Analysis 
+                        </div> 
+                    </div> 
 
-                    <h3 class="font-bold text-xl mb-4 text-stone-100">Visualization & Finance Tools</h3>
-                    <div class="flex flex-wrap gap-3">
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">📈</span> Tableau
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">📊</span> Advanced Excel
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">💻</span> Dashboard Development
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">🧹</span> Data Wrangling
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">💲</span> Financial Modeling
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">💼</span> P&L Management
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">🔍</span> Sensitivity Analysis
-                        </div>
-                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
-                            <span class="mr-2 text-blue-400">🌐</span> Market Trend Analysis
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                    <h3 class="font-bold text-xl mb-4 text-stone-100">Visualization & Finance Tools</h3> 
+                    <div class="flex flex-wrap gap-3"> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">📈</span> Tableau 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">📊</span> Advanced Excel 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">💻</span> Dashboard Development 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">🧹</span> Data Wrangling 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">💲</span> Financial Modeling 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">💼</span> P&L Management 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">🔍</span> Sensitivity Analysis 
+                        </div> 
+                        <div class="flex items-center bg-stone-900 text-stone-100 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700"> 
+                            <span class="mr-2 text-blue-400">🌐</span> Market Trend Analysis 
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+        </section> 
 
-        <section id="experience" class="py-16 bg-stone-900">
-            <div class="container mx-auto px-6 max-w-4xl">
-                <h2 class="section-header mb-8 text-center">Experience</h2>
-                <div class="space-y-8">
-                    <div class="card">
-                        <h3 class="text-xl font-bold text-stone-100">Graduate Assistant – William & Mary</h3>
-                        <p class="text-stone-400 text-sm">Williamsburg, VA | Aug 2025 – Present</p>
-                        <ul class="list-disc list-inside mt-4 text-stone-300 space-y-2">
-                            <li>Applied statistical analysis in grading and developing coursework, ensuring accuracy in advanced analytics assignments.</li>
-                            <li>Provided technical support for setting up IDEs and ensuring Python and R files render or operate smoothly for both in-person and online degree programs.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="card">
-                        <h3 class="text-xl font-bold text-stone-100">TikTok Shop - Operations: Business Analytics & New Initiatives</h3>
-                        <p class="text-stone-400 text-sm">Bangkok, Thailand | Jan 2024 – July 2025</p>
-                        <h4 class="text-lg font-semibold text-blue-500 mt-4">Manager and Project Lead</h4>
-                        <p class="text-stone-400 text-sm">Jan 2025 – July 2025</p>
-                        <ul class="list-disc list-inside mt-2 text-stone-300 space-y-2">
-                            <li>Spearheaded a team of 5 to continue to drive impactful projects in Logistics, Governance, ADs, Brands, Aftersales and account management productivity</li>
-                            <li>Evaluated, strategized and implemented revenue driver plans to secure Tiktok shops revenue with a YoY growth of 113%</li>
-                            <li>Implemented Account Management Balance scorecard to enhance productivity, product adoption by 100% and revamp cost per headcount by 53%</li>
-                        </ul>
-                        <h4 class="text-lg font-semibold text-blue-500 mt-4">Assistant Manager and Project Lead</h4>
-                        <p class="text-stone-400 text-sm">Jan 2024 – Dec 2024</p>
-                        <ul class="list-disc list-inside mt-2 text-stone-300 space-y-2">
-                            <li>Constructed key market strategies using price sensitivity and trendy products, achieving high price competitiveness and retaining 36% of high-priced orders within two months, making TH best performing market in SEA</li>
-                            <li>Conducted cost/benefit analysis for a price competitive project, adjusting SEA targets after identifying a GMV loss of -0.27% for TH</li>
-                            <li>Evaluated demand for coin cashback, identifying a new revenue stream to boost financial performance and restructuring margin 3 by 3 pts</li>
-                            <li>Optimized P&L for Super Brand Day packages, overhauling profit margins from -5% to 45% per package</li>
-                        </ul>
-                    </div>
+        <section id="experience" class="py-16 bg-stone-900"> 
+            <div class="container mx-auto px-6 max-w-4xl"> 
+                <h2 class="section-header mb-8 text-center">Experience</h2> 
+                <div class="space-y-8"> 
+                    <div class="card"> 
+                        <h3 class="text-xl font-bold text-stone-100">Graduate Assistant – William & Mary</h3> 
+                        <p class="text-stone-400 text-sm">Williamsburg, VA | Aug 2025 – Present</p> 
+                        <ul class="list-disc list-inside mt-4 text-stone-300 space-y-2"> 
+                            <li>Applied statistical analysis in grading and developing coursework, ensuring accuracy in advanced analytics assignments.</li> 
+                            <li>Provided technical support for setting up IDEs and ensuring Python and R files render or operate smoothly for both in-person and online degree programs.</li> 
+                        </ul> 
+                    </div> 
+                    
+                    <div class="card"> 
+                        <h3 class="text-xl font-bold text-stone-100">TikTok Shop - Operations: Business Analytics & New Initiatives</h3> 
+                        <p class="text-stone-400 text-sm">Bangkok, Thailand | Jan 2024 – July 2025</p> 
+                        <h4 class="text-lg font-semibold text-blue-500 mt-4">Manager and Project Lead</h4> 
+                        <p class="text-stone-400 text-sm">Jan 2025 – July 2025</p> 
+                        <ul class="list-disc list-inside mt-2 text-stone-300 space-y-2"> 
+                            <li>Spearheaded a team of 5 to continue to drive impactful projects in Logistics, Governance, ADs, Brands, Aftersales and account management productivity</li> 
+                            <li>Evaluated, strategized and implemented revenue driver plans to secure Tiktok shops revenue with a YoY growth of 113%</li> 
+                            <li>Implemented Account Management Balance scorecard to enhance productivity, product adoption by 100% and revamp cost per headcount by 53%</li> 
+                        </ul> 
+                        <h4 class="text-lg font-semibold text-blue-500 mt-4">Assistant Manager and Project Lead</h4> 
+                        <p class="text-stone-400 text-sm">Jan 2024 – Dec 2024</p> 
+                        <ul class="list-disc list-inside mt-2 text-stone-300 space-y-2"> 
+                            <li>Constructed key market strategies using price sensitivity and trendy products, achieving high price competitiveness and retaining 36% of high-priced orders within two months, making TH best performing market in SEA</li> 
+                            <li>Conducted cost/benefit analysis for a price competitive project, adjusting SEA targets after identifying a GMV loss of -0.27% for TH</li> 
+                            <li>Evaluated demand for coin cashback, identifying a new revenue stream to boost financial performance and restructuring margin 3 by 3 pts</li> 
+                            <li>Optimized P&L for Super Brand Day packages, overhauling profit margins from -5% to 45% per package</li> 
+                        </ul> 
+                    </div> 
 
-                    <div class="card">
-                        <h3 class="text-xl font-bold text-stone-100">Shopee - Business Intelligence : BI Strategy & Planning</h3>
-                        <p class="text-stone-400 text-sm">Bangkok, Thailand | July 2023 - December 2023</p>
-                        <ul class="list-disc list-inside mt-4 text-stone-300 space-y-2">
-                            <li>Determined key performance metrics for campaigns & developed automated dashboards using SQL & Excel for cross-functional use</li>
-                            <li>Led key analysis for cross-functional campaign improvement, optimizing costs by 30% & retaining a performance uplift of > 50%</li>
-                            <li>Analyzed key campaign mechanics in terms of ROI, traffic uplift, purchase rates, and consumer retention, implementing revised strategies</li>
-                            <li>Implemented forecasting models for cost projections based on predicted buyer behavior to lead campaign spending to improve ROI by 5x</li>
-                        </ul>
-                    </div>
+                    <div class="card"> 
+                        <h3 class="text-xl font-bold text-stone-100">Shopee - Business Intelligence : BI Strategy & Planning</h3> 
+                        <p class="text-stone-400 text-sm">Bangkok, Thailand | July 2023 - December 2023</p> 
+                        <ul class="list-disc list-inside mt-4 text-stone-300 space-y-2"> 
+                            <li>Determined key performance metrics for campaigns & developed automated dashboards using SQL & Excel for cross-functional use</li> 
+                            <li>Led key analysis for cross-functional campaign improvement, optimizing costs by 30% & retaining a performance uplift of > 50%</li> 
+                            <li>Analyzed key campaign mechanics in terms of ROI, traffic uplift, purchase rates, and consumer retention, implementing revised strategies</li> 
+                            <li>Implemented forecasting models for cost projections based on predicted buyer behavior to lead campaign spending to improve ROI by 5x</li> 
+                        </ul> 
+                    </div> 
 
-                    <div class="card">
-                        <h3 class="text-xl font-bold text-stone-100">Shopee Global Leaders Program (Management Trainee)</h3>
-                        <p class="text-stone-400 text-sm">Thailand & Vietnam | July 2021 - July 2023</p>
-                        <h4 class="text-lg font-semibold text-blue-500 mt-4">Rotation 4: Operations - Order Management Team, VN</h4>
-                        <ul class="list-disc list-inside mt-2 text-stone-300 space-y-2">
-                            <li>Analyzed and optimized delivery routes, proposing optimal backend settings to meet buyer expectations improving CSAT by 200% in 1 month of execution</li>
-                            <li>Devised a forecast model for delivery and pickup based on internal capacity to control backlog and ensure optimal performance reducing backlog by 10%</li>
-                        </ul>
-                        <h4 class="text-lg font-semibold text-blue-500 mt-4">Rotation 3: Business Development Seller Performance Team, TH</h4>
-                        <ul class="list-disc list-inside mt-2 text-stone-300 space-y-2">
-                            <li>Revised assortment health with a quality and quantity increase of 2.0x and 1.5x, respectively</li>
-                            <li>Launched targeted monetization programs for untapped SME seller segments, increasing platform revenue 250% by increasing activation, engagement, and conversion within group</li>
-                            <li>Automated and streamlined databases, reducing manual workload by 95%</li>
-                        </ul>
-                        <h4 class="text-lg font-semibold text-blue-500 mt-4">Rotation 2: Business Intelligence Strategic Insight Team, TH</h4>
-                        <ul class="list-disc list-inside mt-2 text-stone-300 space-y-2">
-                            <li>Created a framework for examining macroeconomic impacts on Shopee's performance, saving $85 million.</li>
-                            <li>Queried, processed, and analyzed data for regional analysis of three countries simultaneously.</li>
-                            <li>Created a dynamic model to calculate optimal interest rate for newly launched micro loans on platform to secure 15% adoption within 1M of launch</li>
-                        </ul>
-                        <h4 class="text-lg font-semibold text-blue-500 mt-4">Rotation 1: Marketing, Big Campaigns Team, TH</h4>
-                        <ul class="list-disc list-inside mt-2 text-stone-300 space-y-2">
-                            <li>Planned, managed, & executed two mega campaigns (11.11 and 12.12), accomplishing highest daily traffic and a 35% increase in GMV YOY.</li>
-                            <li>Planned, executed, and analyzed first-ever e-auction mechanic in Thailand during 11.11 x Pruksa, achieving a 588% engagement uplift.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+                    <div class="card"> 
+                        <h3 class="text-xl font-bold text-stone-100">Shopee Global Leaders Program (Management Trainee)</h3> 
+                        <p class="text-stone-400 text-sm">Thailand & Vietnam | July 2021 - July 2023</p> 
+                        <h4 class="text-lg font-semibold text-blue-500 mt-4">Rotation 4: Operations - Order Management Team, VN</h4> 
+                        <ul class="list-disc list-inside mt-2 text-stone-300 space-y-2"> 
+                            <li>Analyzed and optimized delivery routes, proposing optimal backend settings to meet buyer expectations improving CSAT by 200% in 1 month of execution</li> 
+                            <li>Devised a forecast model for delivery and pickup based on internal capacity to control backlog and ensure optimal performance reducing backlog by 10%</li> 
+                        </ul> 
+                        <h4 class="text-lg font-semibold text-blue-500 mt-4">Rotation 3: Business Development Seller Performance Team, TH</h4> 
+                        <ul class="list-disc list-inside mt-2 text-stone-300 space-y-2"> 
+                            <li>Revised assortment health with a quality and quantity increase of 2.0x and 1.5x, respectively</li> 
+                            <li>Launched targeted monetization programs for untapped SME seller segments, increasing platform revenue 250% by increasing activation, engagement, and conversion within group</li> 
+                            <li>Automated and streamlined databases, reducing manual workload by 95%</li> 
+                        </ul> 
+                        <h4 class="text-lg font-semibold text-blue-500 mt-4">Rotation 2: Business Intelligence Strategic Insight Team, TH</h4> 
+                        <ul class="list-disc list-inside mt-2 text-stone-300 space-y-2"> 
+                            <li>Created a framework for examining macroeconomic impacts on Shopee's performance, saving $85 million.</li> 
+                            <li>Queried, processed, and analyzed data for regional analysis of three countries simultaneously.</li> 
+                            <li>Created a dynamic model to calculate optimal interest rate for newly launched micro loans on platform to secure 15% adoption within 1M of launch</li> 
+                        </ul> 
+                        <h4 class="text-lg font-semibold text-blue-500 mt-4">Rotation 1: Marketing, Big Campaigns Team, TH</h4> 
+                        <ul class="list-disc list-inside mt-2 text-stone-300 space-y-2"> 
+                            <li>Planned, managed, & executed two mega campaigns (11.11 and 12.12), accomplishing highest daily traffic and a 35% increase in GMV YOY.</li> 
+                            <li>Planned, executed, and analyzed first-ever e-auction mechanic in Thailand during 11.11 x Pruksa, achieving a 588% engagement uplift.</li> 
+                        </ul> 
+                    </div> 
+                </div> 
+            </div> 
+        </section> 
 
-        <section id="projects" class="py-16">
-            <div class="container mx-auto px-6 max-w-4xl">
-                <h2 class="section-header mb-8 text-center">Projects & Leadership</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-blue-500">Job Market Analysis Dashboard <span class="text-stone-400 font-normal text-sm">(Group Project)</span></h3>
-                        <p class="mt-4 text-stone-300">A live dashboard analyzing the job market, utilizing callbacks to provide an interactive and dynamic user experience. This project was developed as a group effort. The dashboard is hosted on Render.com.</p>
-                        <a href="https://final-dashboard-8u8b.onrender.com" target="_blank" class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-300 font-medium">View Live Dashboard &rarr;</a>
-                    </div>
-                    <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-blue-500">Yahoo Finance Tariff Analysis <span class="text-stone-400 font-normal text-sm">(Group Project)</span></h3>
-                        <p class="mt-4 text-stone-300">A data-driven project to analyze the impacts of tariffs on various industries, focusing on companies like General Motors, Apple, and Duke Energy. The project involved data wrangling and visualization to showcase the diverse effects of the tariffs. (Team members: Latisha Khorana, RaKaya Johnson, Mann Pawar, Brandon Ward).</p>
-                        <a href="y_finance_team11_final_wdash.zip/yfinance_v2.py" class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-300 font-medium">View Project Code &rarr;</a>
-                    </div>
-                    <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-blue-500">MSBA Student Council</h3>
-                        <p class="text-stone-400 text-sm">Aug 2025 - Present</p>
-                        <p class="mt-4 text-stone-300">Active member of the student council, contributing to student life and academic initiatives within the MSBA program.</p>
-                    </div>
-                    <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-blue-500">Blind Theatre Charity Project</h3>
-                        <p class="text-stone-400 text-sm">May 2019 - Oct 2019</p>
-                        <p class="mt-4 text-stone-300">A project focused on using theatre as a medium for charity, with a focus on engaging with the blind community.</p>
-                    </div>
-                    <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-blue-500">Social Enterprise Conference (SECON)</h3>
-                        <p class="text-stone-400 text-sm">Hosted by UNESCO Bangkok</p>
-                        <p class="mt-4 text-stone-300">An event focused on bringing together social entrepreneurs to discuss impactful and sustainable business models.</p>
-                    </div>
-                    <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-blue-500">Wednesday Morning English School</h3>
-                        <p class="mt-4 text-stone-300">A personal project focused on volunteering at a school to teach English to students on a weekly basis.</p>
-                    </div>
-                    <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-blue-500">Graduate Council, William & Mary</h3>
-                        <p class="text-stone-400 text-sm">Aug 2025 - Present</p>
-                        <p class="mt-4 text-stone-300">Serve on the International Advisory Committee, contributing quantitative insights into global strategy initiatives.</p>
-                    </div>
-                    
-                    <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-blue-500">Newman Exclusive Marketing Director</h3>
-                        <p class="mt-4 text-stone-300">Led end-to-end marketing campaigns, ascertained influencer partnership opportunities, managed marketing budgets, and developed company branding—including website, logo, and visual identity.</p>
-                        <a href="https://www.newmanexclusive.com" target="_blank" class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-300 font-medium">Visit Website &rarr;</a>
-                    </div>
-                    <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-blue-500">Indie Band Marketing Campaign</h3>
-                        <p class="mt-4 text-stone-300">Improved band's overall social media traction with +17% avg. monthly streams, +25% avg. monthly listeners and followers count by +15% in 2 weeks.</p>
-                    </div>
-                    <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-blue-500">Self-Published Author</h3>
-                        <p class="mt-4 text-stone-300">Published a book on Amazon Direct: "The Anguished Us."; a collection of poems.</p>
-                        <a href="https://www.amazon.com/Anguished-Us-Bad-1/dp/1545436878" target="_blank" class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-300 font-medium">View on Amazon &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="certifications" class="py-16 bg-stone-900">
-            <div class="container mx-auto px-6 max-w-4xl">
-                <h2 class="section-header mb-8 text-center">Professional Certifications</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-blue-500">Data Analyst in Python</h3>
-                        <p class="text-stone-400 text-sm">DataCamp | Completed July 19, 2025</p>
-                        <a href="certificate.pdf" download class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-300 font-medium">Download Certificate &rarr;</a>
-                    </div>
-                    <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-blue-500">Data Analyst in R</h3>
-                        <p class="text-stone-400 text-sm">DataCamp | Completed July 08, 2025</p>
-                        <a href="new.pdf" download class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-300 font-medium">Download Certificate &rarr;</a>
-                    </div>
-                    <div class="card">
-                        <h3 class="font-bold text-xl mb-2 text-blue-500">Data Analysis with R Specialization</h3>
-                        <p class="text-stone-400 text-sm">Coursera & Duke University | Completed July 26, 2025</p>
-                        <p class="mt-2 text-stone-300">
-                            Includes: Introduction to Probability and Data with R, Inferential Statistics, Linear Regression and Modeling.
-                        </p>
-                        <a href="Coursera PX5WJH7GPN3L.pdf" download class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-300 font-medium">Download Certificate &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <section id="projects" class="py-16"> 
+            <div class="container mx-auto px-6 max-w-4xl"> 
+                <h2 class="section-header mb-8 text-center">Projects & Leadership</h2> 
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8"> 
+                    <div class="card"> 
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Job Market Analysis Dashboard <span class="text-stone-400 font-normal text-sm">(Group Project)</span></h3> 
+                        <p class="mt-4 text-stone-300">A live dashboard analyzing the job market, utilizing callbacks to provide an interactive and dynamic user experience. This project was developed as a group effort. The dashboard is hosted on Render.com.</p> 
+                        <a href="https://final-dashboard-8u8b.onrender.com" target="_blank" class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-300 font-medium">View Live Dashboard &rarr;</a> 
+                    </div> 
+                    <div class="card"> 
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Yahoo Finance Tariff Analysis <span class="text-stone-400 font-normal text-sm">(Group Project)</span></h3> 
+                        <p class="mt-4 text-stone-300">A data-driven project to analyze the impacts of tariffs on various industries, focusing on companies like General Motors, Apple, and Duke Energy. The project involved data wrangling and visualization to showcase the diverse effects of the tariffs. (Team members: Latisha Khorana, RaKaya Johnson, Mann Pawar, Brandon Ward).</p> 
+                        <a href="y_finance_team11_final_wdash.zip/yfinance_v2.py" class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-300 font-medium">View Project Code &rarr;</a> 
+                    </div> 
+                    <div class="card"> 
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">MSBA Student Council</h3> 
+                        <p class="text-stone-400 text-sm">Aug 2025 - Present</p> 
+                        <p class="mt-4 text-stone-300">Active member of the student council, contributing to student life and academic initiatives within the MSBA program.</p> 
+                    </div> 
+                    <div class="card"> 
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Blind Theatre Charity Project</h3> 
+                        <p class="text-stone-400 text-sm">May 2019 - Oct 2019</p> 
+                        <p class="mt-4 text-stone-300">A project focused on using theatre as a medium for charity, with a focus on engaging with the blind community.</p> 
+                    </div> 
+                    <div class="card"> 
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Social Enterprise Conference (SECON)</h3> 
+                        <p class="text-stone-400 text-sm">Hosted by UNESCO Bangkok</p> 
+                        <p class="mt-4 text-stone-300">An event focused on bringing together social entrepreneurs to discuss impactful and sustainable business models.</p> 
+                    </div> 
+                    <div class="card"> 
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Wednesday Morning English School</h3> 
+                        <p class="mt-4 text-stone-300">A personal project focused on volunteering at a school to teach English to students on a weekly basis.</p> 
+                    </div> 
+                    <div class="card"> 
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Graduate Council, William & Mary</h3> 
+                        <p class="text-stone-400 text-sm">Aug 2025 - Present</p> 
+                        <p class="mt-4 text-stone-300">Serve on the International Advisory Committee, contributing quantitative insights into global strategy initiatives.</p> 
+                    </div> 
+                    
+                    <div class="card"> 
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Newman Exclusive Marketing Director</h3> 
+                        <p class="mt-4 text-stone-300">Led end-to-end marketing campaigns, ascertained influencer partnership opportunities, managed marketing budgets, and developed company branding—including website, logo, and visual identity.</p> 
+                        <a href="https://www.newmanexclusive.com" target="_blank" class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-300 font-medium">Visit Website &rarr;</a> 
+                    </div> 
+                    <div class="card"> 
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Indie Band Marketing Campaign</h3> 
+                        <p class="mt-4 text-stone-300">Improved band's overall social media traction with +17% avg. monthly streams, +25% avg. monthly listeners and followers count by +15% in 2 weeks.</p> 
+                    </div> 
+                    <div class="card"> 
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Self-Published Author</h3> 
+                        <p class="mt-4 text-stone-300">Published a book on Amazon Direct: "The Anguished Us."; a collection of poems.</p> 
+                        <a href="https://www.amazon.com/Anguished-Us-Bad-1/dp/1545436878" target="_blank" class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-300 font-medium">View on Amazon &rarr;</a> 
+                    </div> 
+                </div> 
+            </div> 
+        </section> 
+        
+        <section id="certifications" class="py-16 bg-stone-900"> 
+            <div class="container mx-auto px-6 max-w-4xl"> 
+                <h2 class="section-header mb-8 text-center">Professional Certifications</h2> 
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8"> 
+                    <div class="card"> 
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Data Analyst in Python</h3> 
+                        <p class="text-stone-400 text-sm">DataCamp | Completed July 19, 2025</p> 
+                        <a href="certificate.pdf" download class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-300 font-medium">Download Certificate &rarr;</a> 
+                    </div> 
+                    <div class="card"> 
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Data Analyst in R</h3> 
+                        <p class="text-stone-400 text-sm">DataCamp | Completed July 08, 2025</p> 
+                        <a href="new.pdf" download class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-300 font-medium">Download Certificate &rarr;</a> 
+                    </div> 
+                    <div class="card"> 
+                        <h3 class="font-bold text-xl mb-2 text-blue-500">Data Analysis with R Specialization</h3> 
+                        <p class="text-stone-400 text-sm">Coursera & Duke University | Completed July 26, 2025</p> 
+                        <p class="mt-2 text-stone-300"> 
+                            Includes: Introduction to Probability and Data with R, Inferential Statistics, Linear Regression and Modeling. 
+                        </p> 
+                        <a href="Coursera PX5WJH7GPN3L.pdf" download class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-300 font-medium">Download Certificate &rarr;</a> 
+                    </div> 
+                </div> 
+            </div> 
+        </section> 
 
-        <section id="contact" class="py-16">
-            <div class="container mx-auto px-6 max-w-4xl">
-                <h2 class="section-header mb-8 text-center">Contact Me</h2>
-                <div class="card text-left space-y-6 text-stone-200">
-                    
-                                        <div class="flex items-center space-x-4">
-                        <i class="fa-solid fa-phone text-blue-500 text-xl w-6 text-center"></i>
-                        <div>
-                            <p class="font-bold text-blue-500">Phone Number</p>
-                            <a href="tel:+17578820222" class="text-stone-300 hover:text-blue-400 transition-colors">+1 (757)-882-0222</a>
-                        </div>
-                    </div>
+        <section id="contact" class="py-16"> 
+            <div class="container mx-auto px-6 max-w-4xl"> 
+                <h2 class="section-header mb-8 text-center">Contact Me</h2> 
+                <div class="card text-center space-y-6 text-stone-200">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="flex flex-col items-center">
+                            <a href="tel:+17578820222" class="text-blue-500 hover:text-blue-300 transition-colors">
+                                <i class="fas fa-phone-alt w-8 h-8 text-3xl mb-1"></i>
+                            </a>
+                            <p class="font-bold text-lg text-blue-500">Phone</p>
+                            <a href="tel:+17578820222" class="text-stone-300 hover:text-blue-500 transition-colors text-sm">+1(757)-882-0222</a>
+                        </div>
 
-                                        <div class="flex items-center space-x-4">
-                        <i class="fa-solid fa-envelope text-blue-500 text-xl w-6 text-center"></i>
-                        <div>
-                            <p class="font-bold text-blue-500">Email</p>
-                            <a href="mailto:lkhorana@wm.edu" class="text-stone-300 hover:text-blue-400 transition-colors">lkhorana@wm.edu</a>
-                        </div>
-                    </div>
+                        <div class="flex flex-col items-center">
+                            <a href="mailto:lkhorana@wm.edu" class="text-blue-500 hover:text-blue-300 transition-colors">
+                                <i class="fas fa-envelope w-8 h-8 text-3xl mb-1"></i>
+                            </a>
+                            <p class="font-bold text-lg text-blue-500">Email</p>
+                            <a href="mailto:lkhorana@wm.edu" class="text-stone-300 hover:text-blue-500 transition-colors text-sm">lkhorana@wm.edu</a>
+                        </div>
 
-                                        <div class="flex items-center space-x-4">
-                        <i class="fa-brands fa-github text-blue-500 text-xl w-6 text-center"></i>
-                        <div>
-                            <p class="font-bold text-blue-500">GitHub</p>
-                                                        <a href="https://github.com/lkhorana/Latishas-Portfolio" target="_blank" class="text-stone-300 hover:text-blue-400 transition-colors">github.com/lkhorana/Latishas-Portfolio</a>
-                        </div>
-                    </div>
+                        <div class="flex flex-col items-center">
+                            <a href="https://github.com/lkhorana" target="_blank" class="text-blue-500 hover:text-blue-300 transition-colors">
+                                <i class="fab fa-github w-8 h-8 text-3xl mb-1"></i>
+                            </a>
+                            <p class="font-bold text-lg text-blue-500">GitHub</p>
+                            <a href="https://github.com/lkhorana" target="_blank" class="text-stone-300 hover:text-blue-500 transition-colors text-sm">/lkhorana</a>
+                        </div>
 
-                                        <div class="flex items-center space-x-4">
-                        <i class="fa-brands fa-linkedin text-blue-500 text-xl w-6 text-center"></i>
-                        <div>
-                            <p class="font-bold text-blue-500">LinkedIn</p>
-                            <a href="https://www.linkedin.com/in/latishakhorana" target="_blank" class="text-stone-300 hover:text-blue-400 transition-colors">linkedin.com/in/latishakhorana</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                        <div class="flex flex-col items-center">
+                            <a href="https://linkedin.com/in/lkhorana" target="_blank" class="text-blue-500 hover:text-blue-300 transition-colors">
+                                <i class="fab fa-linkedin w-8 h-8 text-3xl mb-1"></i>
+                            </a>
+                            <p class="font-bold text-lg text-blue-500">LinkedIn</p>
+                            <a href="https://github.com/lkhorana" target="_blank" class="text-stone-300 hover:text-blue-500 transition-colors text-sm">/lkhorana</a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </section> 
 
-        <footer class="py-12 bg-stone-900 text-stone-100 text-center">
-            <p>&copy; 2025 Latisha Khorana. All rights reserved.</p>
-        </footer>
-    </main>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        });
-    </script>
+        <footer class="py-12 bg-stone-900 text-stone-100 text-center"> 
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 </html>
